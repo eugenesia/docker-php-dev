@@ -1,8 +1,11 @@
-<p>Hello world!<p/>
+<h1>Example page</h2>
+
+<h2>PHP</h2>
 
 <p>This is PHP version <?php print phpversion(); ?>
   on port <?php print $_SERVER['SERVER_PORT']; ?></p>
 
+<h2>MySQL</h2>
 <?php
   // Connect to MySQL server on container "mysql" (defined as service name in
   // docker-compose.yml). Credentials are configured in docker-compose.yml.
