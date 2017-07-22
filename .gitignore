@@ -2,6 +2,9 @@
 /data/mysql/*
 /data/php/*
 
+# Show example page.
+!/data/php/example.php
+
 # Docker config files.
 /docker/.env
 /docker/docker-compose.yml
