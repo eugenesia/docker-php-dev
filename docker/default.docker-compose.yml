@@ -1,0 +1,31 @@
+version: '3'
+services:
+
+  web:
+    image: eugenesia/phpfarm:jessie
+    ports:
+      # Expose PHP/Apache ports.
+      - "8051:8051"
+      - "8052:8052"
+      - "8053:8053"
+      - "8054:8054"
+      - "8055:8055"
+      - "8056:8056"
+      - "8070:8070"
+      - "8071:8071"
+    volumes:
+      # PHP code files go in ../data/php
+      - ../data/php:/var/www
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: php
+    ports:
+      # Expose MySQL port as 3307 on host.
+      - "3307:3306"
+    volumes:
+      # MySQL data files go in ../data/mysql
+      - "../data/mysql:/var/lib/mysql"
+
